@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+:root {
+    --bg-color: #000;
+    --snd-bg-color: #111;
+    --text-color: #fff;
+    --main-color: #45ffca;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    padding-bottom: 2.5rem;
+}
+
+.judul {
+    min-height: 2vh;
+    padding: 3rem 8% 3rem;
+    margin-top: 1rem;
+    font-size: 5rem;
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    min-height: 2vh;
+    padding: 3rem 8% 3rem;
+    margin-top: 1rem;
+    font-size: 4rem;
+    text-align: center;
+    color: #fff;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.table-plans {
+    padding: 0px 5.7rem;
+}
+
+table {
+    padding: 3.5px;
+    width: 100%;
+    background: var(--bg-color);
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+}
+
+th, td {
+    color: black;
+    background: #fff;
+    font-size: 18px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--main-color);
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

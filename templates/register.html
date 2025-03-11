@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PanaCea - Register</title>
+    <link rel="icon" type="image/png" href="../static/logoo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login&register.css') }}">
+    <script src="{{ url_for('static', filename='login&register.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+     {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div style="color: {% if category == 'error' %}red{% else %}green{% endif %};
+                            font-size: 20px;">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+        <br>
+        <form method="POST" action="/register">
+            <label for="name">Username:</label>
+            <input type="text" id="name" name="name" autocomplete="off" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" autocomplete="off" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label onclick="togglePassword()" style="cursor: pointer; color: blue; margin-left: 5px; height: 25px;">Show</label>
+
+            <button type="submit">Sign up</button>
+        </form>
+        <p>Already have account? <a href="{{ url_for('login') }}">Login here</a>.</p>
+    </div>
+</body>
+</html>

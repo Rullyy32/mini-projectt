@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PanaCea</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logoo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+  <header>
+    <a href="#home" class="logo">Pana<span>Cea</span></a>
+
+    <div class='bx bx-menu' id="menu-icon"></div>
+
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#review">Review</a></li>
+    </ul>
+
+    <div class="top-btn">
+      <a href="{{ url_for('login') }}" class="nav-btn">Join Us</a>
+    </div>
+
+  </header>
+
+<section class="home" id="home">
+  <div class="home-content">
+
+    <h3>Build Your</h3>
+    <h1>Dream Physique</h1>
+    <h3><span class="multiple-text"></span></h3>
+
+    <p>"Throughout Heaven and Earth, I Alone am the Honored One"</p>
+
+    <a href="{{ url_for('login') }}" class="btn">Join Us</a>
+
+  </div>
+
+    <div class="home-img">
+      <img src="../static/images/attas.png" alt="gym">
+    </div>
+
+</section>
+
+<section class="services" id="services">
+  <h2 class="heading">Our <span>Services</span></h2>
+
+  <div class="services-content">
+    <div class="row">
+      <img src="../static/images/physic.PNG" alt="physicalfitness">
+
+      <h4>Physical Fitness</h4>
+    </div>
+
+     <div class="row">
+      <img src="../static/images/hypertrophy.PNG" alt="hypertrophy">
+
+      <h4>Hypertrophy</h4>
+    </div>
+
+     <div class="row">
+      <img src="../static/images/weightlift.PNG" alt="strengthtraining">
+
+      <h4>Strength Training</h4>
+    </div>
+
+     <div class="row">
+      <img src="../static/images/kardio.PNG" alt="cardio">
+
+      <h4>Fat Lose</h4>
+    </div>
+
+     <div class="row">
+      <img src="../static/images/angkatbeban.PNG" alt="kelasberat">
+
+      <h4>Weightlifting</h4>
+    </div>
+
+     <div class="row">
+      <img src="../static/images/endurance.PNG" alt="dayatahan">
+
+      <h4>Endurance</h4>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="../static/images/cycle.PNG" alt="alasan">
+    </div>
+
+    <div class="about-content">
+        <h2 class="heading">Why Choose Us?</h2>
+
+        <p>We provide solutions to all problems related to body fitness.</p>
+        <p>Our Diverse membership base creates a friendly and supportive atmosphere, where you can make friends and stay motivated.</p>
+        <p>It doesn't stop there, we also provide extra services by adjusting your training schedule, and can train when you are ready.</p>
+
+        <a href="{{ url_for('login') }}" class="btn">Book a Free Class</a>
+    </div>
+</section>
+
+<section class="plans" id="pricing">
+    <h2 class="heading">Our <span>Plans</span></h2>
+
+    <div class="plans-content">
+
+        <div class="plans-content">
+
+            <div class="box">
+                <h3>BEGINNER</h3>
+                <h2><span>FREE</span></h2>
+                <ul>
+                    <li>Workout Plan</li>
+                </ul>
+                <a href="{{ url_for('login') }}">
+                    Join Now
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+            </div>
+
+            <div class="box">
+                <h3>BASIC</h3>
+                <h2><span>Rp50.000,00/Month</span></h2>
+                <ul>
+                    <li>Smart Workout Plan</li>
+                    <li>At Home Workout</li>
+                </ul>
+                <a href="{{ url_for('login') }}">
+                    Join Now
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+            </div>
+
+
+             <div class="box">
+                <h3>PRO</h3>
+                <h2><span>Rp100.000,00/Month</span></h2>
+                <ul>
+                    <li>Pro GYMs</li>
+                    <li>Smart Workout Plan</li>
+                    <li>At Home Workout</li>
+                </ul>
+                 <a href="{{ url_for('login') }}">
+                    Join Now
+                    <i class="bx bx-right-arrow-alt"></i>
+                 </a>
+            </div>
+
+
+             <div class="box">
+                <h3>PREMIUM</h3>
+                <h2><span>Rp150.000,00/Month</span></h2>
+                <ul>
+                    <li>ELITE GYMs and Classes</li>
+                    <li>Pro GYMs</li>
+                    <li>Smart Workout Plan</li>
+                    <li>At Home Workout</li>
+                    <li>Personal Training</li>
+                </ul>
+                <a href="{{ url_for('login') }}">
+                    Join Now
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="review" id="review">
+    <div class="review-box">
+        <h2 class="heading">Client <span>Reviews</span></h2>
+
+        <div class="wrapper">
+            <div class="review-item">
+                <img src="../static/images/cbumkww.PNG" alt="chris">
+                <h2>Chris Bumstead</h2>
+
+                <div class="rating>">
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                </div>
+
+                <p>
+                    Very Good!
+                </p>
+
+            </div>
+
+            <div class="review-item">
+                <img src="../static/images/ramonkww.png" alt="ramon">
+                <h2>Ramon Dino</h2>
+
+                <div class="rating>">
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                </div>
+
+                <p>
+                    Amazing!
+                </p>
+
+            </div>
+
+            <div class="review-item">
+                <img src="../static/images/urskww.png" alt="urs">
+                <h2>Urs Kalecinski</h2>
+
+                <div class="rating>">
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                    <i class='bx bxs-star' id='Star'></i>
+                </div>
+
+                <p>
+                    Marvelous!
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="social">
+        <a href="https://web.facebook.com/rullybaguso">
+            <i class='bx bxl-facebook'></i>
+        </a>
+        <a href="https://www.instagram.com/thespacetimebender/">
+            <i class='bx bxl-instagram' ></i>
+        </a>
+        <a href="https://github.com/Rullyy32">
+            <i class='bx bxl-github'></i>
+        </a>
+    </div>
+
+    <p class="copyright">
+        &copy; PanaCea 2025 - All Rights Reserved
+    </p>
+</footer>
+
+</body>
+</html>

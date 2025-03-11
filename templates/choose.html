@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PanaCea - Choose</title>
+    <link rel="icon" type="image/png" href="../static/logoo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='choose.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<section class="plans" id="pricing">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="flash-message {{ category }}">
+                {{ message }}
+                <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+    <h2 class="heading"><span>Choose </span>Your <span>Plans</span></h2>
+
+    <div class="plans-content">
+
+        <div class="plans-content">
+
+            <div class="box">
+                <h3>BEGINNER</h3>
+                <h2><span>FREE</span></h2>
+                <ul>
+                    <li>Workout Plan</li>
+                </ul>
+                <a href="{{ url_for('beginner') }}">
+                    Join Now
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+            </div>
+
+            <div class="box">
+                <h3>BASIC</h3>
+                <h2><span>Rp50.000,00/Month</span></h2>
+                <ul>
+                    <li>Smart Workout Plan</li>
+                    <li>At Home Workout</li>
+                </ul>
+                <a href="{{ url_for('basic') }}">
+                    Join Now
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+            </div>
+
+
+             <div class="box">
+                <h3>PRO</h3>
+                <h2><span>Rp100.000,00/Month</span></h2>
+                <ul>
+                    <li>Pro GYMs</li>
+                    <li>Smart Workout Plan</li>
+                    <li>At Home Workout</li>
+                </ul>
+                 <a href="{{ url_for('pro') }}">
+                    Join Now
+                    <i class="bx bx-right-arrow-alt"></i>
+                 </a>
+            </div>
+
+
+             <div class="box">
+                <h3>PREMIUM</h3>
+                <h2><span>Rp150.000,00/Month</span></h2>
+                <ul>
+                    <li>ELITE GYMs and Classes</li>
+                    <li>Pro GYMs</li>
+                    <li>Smart Workout Plan</li>
+                    <li>At Home Workout</li>
+                    <li>Personal Training</li>
+                </ul>
+                <a href="{{ url_for('premium') }}">
+                    Join Now
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

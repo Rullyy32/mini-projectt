@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PanaCea - Profile</title>
+    <link rel="icon" type="image/png" href="../static/logoo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Information</h1>
+
+        <form action="/profile" method="post">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="off" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" autocomplete="off" required>
+
+                <label for="height">Height (cm):</label>
+                <input type="number" step="0.1" id="height" name="height" autocomplete="off" required>
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" step="0.1" id="weight" name="weight" autocomplete="off" required>
+
+                <label for="disease_history">Disease History:</label>
+                <input type="text" id="disease_history" name="disease_history" autocomplete="off" required>
+                <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

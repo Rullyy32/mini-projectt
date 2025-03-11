@@ -1,0 +1,139 @@
+:root {
+     --bg-light: #f4f4f4;
+     --bg-dark: #1e1e1e;
+     --text-light: #000;
+     --text-dark: #fff;
+     --border-light: #ccc;
+     --border-dark: #555;
+     --main-color: #45ffca;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-light);
+}
+
+.container {
+    background-color: #000;
+    padding: 2rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--main-color);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: background 0.3s, border 0.3s;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.dark-mode .container {
+    background-color: #2a2a2a;
+    border-color: var(--border-dark);
+}
+
+.dark-mode input {
+    background-color: #333;
+    color: #fff;
+    border-color: var(--border-dark);
+}
+
+.dark-mode .password-check {
+    color: #ff8080;
+}
+
+button {
+    padding: 0.75rem;
+    background-color: var(--main-color);
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:active {
+    background-color: #000000;
+}
+
+.btn:focus {
+     outline: none;
+}
+
+p {
+    margin-top: 1rem;
+    color: #ccc;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    button {
+        font-size: 0.9rem;
+    }
+}
